@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="1" />
+	<title>Live Foosball Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--<link rel="stylesheet" type="text/css" href="CGP.css">-->
+	<style type="text/css">
+
+body{
+	background-color: #232323;
+}
+.jumbotron:nth-of-type(1){
+	color: white;
+	background: rgb(60, 132, 203);
+	text-align: center;
+	padding-bottom: 15px;
+	padding-top: 10px;
+	margin-bottom: 0px; 
+	font-family: "Montserrat", "Avenir";
+}
+
+h1{
+	font-weight: normal;
+}
+
+.row{
+	background: white;
+	color: rgb(60, 132, 203);
+}
+
+.col-xs-4:nth-of-type(1){
+	text-align: right;
+}
+
+/*.col-xs-4:nth-of-type(1):hover span{
+	background-color: blue;
+	color: white;
+}*/
+
+.col-xs-4:nth-of-type(2){
+	text-align: center;
+}
+
+.col-xs-1:nth-of-type(1){
+	text-align: center;
+}
+
+.col-xs-1:nth-of-type(2){
+	text-align: center;
+}
+
+.jumbotron{
+	background-color: #232323;
+	width: 100%;
+}
+
+.container{
+	margin-top: 30px;
+	width: 100%;
+}
+
+.square{
+	width: 30%;
+	background-color: rgb(60, 132, 203);
+	padding-bottom: 10%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+	/*transition: visibility 2.0s;*/
+}
+.square-transparent{
+	width: 30%;
+	background-color: rgb(60, 132, 203);
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+	visibility: hidden;
+	/*transition: visibility 2.0s;*/
+}
+.score{
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-size: 75px;
+	padding-top: 30%;
+}
+		
+	</style>
+</head>
+<body>
+
+<div class="jumbotron">
+	<h1>LIVE FOOSBALL GAME</h1>
+</div>
+<div class="row">
+	<div class="col-xs-4"><span> </span></div>
+	<div class="col-xs-4">SCORES</div>
+	<div class="col-xs-4">
+		<div class="row">
+			<div class="col-xs-1"> </div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"> </div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+			<div class="col-xs-1"></div>
+		</div>
+	</div>
+</div>
+<!-- <div class="jumbotron"> -->
+	<div class="container">
+		<div class="square"><p class="score" id="team1">1</p></div>
+		<div class="square-transparent"></div>
+		<div class="square"><p class="score" id="team2">0</p></div>
+	</div>
+<!-- </div> -->
+
+</body>
+<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous">
+	</script>
+
+	<script 
+	  	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  	</script>
+  	
+  	<script>
+  	    var t1 = document.querySelector("#team1");
+  	    t1.textContent = {{payload.score}};
+  	    var t2 = document.querySelector("#team2");
+  	    t2.textContent = {{payload.score2}};
+  	</script>
+  	
+  	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</html>
