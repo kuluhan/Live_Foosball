@@ -7,3 +7,10 @@ The Arduino Yun connects to the IBM Watson IOT platform on IBM Cloud and sends t
 The information is sent to a web page template using the Node-Red platform.
 When the web page template -which is also included in the repository- receives the score information, a javascript code updates the contents of the webpage.
 The web page refreshes itself every 1 second so that it keeps the score almost in real time.
+
+
+
+These lines must be changed according to the IBM watson IOT credentials of the user
+#define CLIENT_ID "d:ID:DeviceType:DeviceName"
+#define MS_PROXY "ID.messaging.internetofthings.ibmcloud.com"
+#define AUTHTOKEN "AUTHTOKEN"
