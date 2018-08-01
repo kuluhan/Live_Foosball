@@ -11,6 +11,9 @@ The web page refreshes itself every 1 second so that it keeps the score almost i
 
 
 These lines must be changed according to the IBM watson IOT credentials of the user
+
+```
 #define CLIENT_ID "d:ID:DeviceType:DeviceName"
 #define MS_PROXY "ID.messaging.internetofthings.ibmcloud.com"
 #define AUTHTOKEN "AUTHTOKEN"
+```
